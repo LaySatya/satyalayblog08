@@ -5,7 +5,7 @@ import Footer from './layouts/footer';
 import Header from './layouts/header';
 import Menu from './layouts/menu';
 import Projects from './layouts/projects';
-
+ 
 function App() {
     return (
         <>

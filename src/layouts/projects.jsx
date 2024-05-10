@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Fade } from 'react-reveal';
 import Dashboard from '../assets/images/dashboard-project.png';
 import FA from '../assets/images/FA-project.png';
 import Fmansgram from '../assets/images/fmansgram-project.png';
@@ -76,10 +77,12 @@ function Projects(){
     return(
         <section className="dark:text-white text-gray-600 dark:bg-slate-900 bg-blue-50 transition-all">
             <div className="w-full">
-                <div className="">
-                    <h3 className='font-medium text-lg text-center'>What I Did?</h3>
-                    <h1 className='font-bold text-[40px] text-blue-400 text-center'>Projects</h1>
-                </div>
+               <Fade>
+                    <div className="">
+                        <h3 className='font-medium text-lg text-center'>What I Did?</h3>
+                        <h1 className='font-bold text-[40px] text-blue-400 text-center'>Projects</h1>
+                    </div>
+               </Fade>
                 <div className='w-11/12 mx-auto'> 
                    <div className='md:flex justify-between mt-20'>
                         <div className='md:w-6/12'>
@@ -115,23 +118,27 @@ function Projects(){
                         }).map((p , i) => (
                                 toggleProject ? ( 
                                     <a href={p.url} target='__blank' key={i}>
-                                        <div className="rounded-xl border border-blue-400 h-56 cursor-pointer group overflow-hidden">
-                                            <img src={p.image} className='rounded-lg object-fill h-[98%] w-[99%] m-[2px] hover:scale-125 duration-150 transition-all hover:opacity-80' alt="Projects"/>
-                                            <div className='relative left-20 group-hover:bottom-24 transition-all duration-500 z-10 group-hover:animate-bounce'>
-                                                <h3 className="text-blue-600 text-3xl font-bold">{p.type}</h3>
-                                                <p className='text-2xl text-slate-900 font-medium'>{p.language}</p>
+                                        <Fade left>
+                                            <div className="rounded-xl border border-blue-400 h-56 cursor-pointer group overflow-hidden">
+                                                <img src={p.image} className='rounded-lg object-fill h-[98%] w-[99%] m-[2px] hover:scale-125 duration-150 transition-all hover:opacity-80' alt="Projects"/>
+                                                <div className='relative left-20 group-hover:bottom-24 transition-all duration-500 z-10 group-hover:animate-bounce'>
+                                                    <h3 className="text-blue-600 text-3xl font-bold">{p.type}</h3>
+                                                    <p className='text-2xl text-slate-900 font-medium'>{p.language}</p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Fade>
                                     </a>
                                 ) : (
                                     <a href={p.url} key={i}>
-                                        <div className="hidden rounded-xl border border-blue-400 h-56 cursor-pointer group overflow-hidden">
-                                            <img src={p.image} className='rounded-lg object-fill h-[98%] w-[99%] m-[2px] hover:scale-125 duration-150 transition-all hover:opacity-80' alt="Projects"/>
-                                            <div className='relative left-20 group-hover:bottom-24 transition-all duration-500 z-10 group-hover:animate-bounce'>
-                                                <h3 className="text-blue-600 text-3xl font-bold">{p.type}</h3>
-                                                <p className='text-2xl text-slate-900 font-medium'>{p.language}</p>
+                                        <Fade>
+                                            <div className="hidden rounded-xl border border-blue-400 h-56 cursor-pointer group overflow-hidden">
+                                                <img src={p.image} className='rounded-lg object-fill h-[98%] w-[99%] m-[2px] hover:scale-125 duration-150 transition-all hover:opacity-80' alt="Projects"/>
+                                                <div className='relative left-20 group-hover:bottom-24 transition-all duration-500 z-10 group-hover:animate-bounce'>
+                                                    <h3 className="text-blue-600 text-3xl font-bold">{p.type}</h3>
+                                                    <p className='text-2xl text-slate-900 font-medium'>{p.language}</p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Fade>
                                     </a>
                                 )
                         ))

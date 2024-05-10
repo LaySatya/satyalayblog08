@@ -1,4 +1,4 @@
-
+import { Fade } from "react-reveal";
 function Footer(){
     const options = [
         {
@@ -57,17 +57,21 @@ function Footer(){
     return(
         <section className="dark:bg-slate-900 bg-blue-50 dark:text-white mb-16">
             <div className="w-full">
-                <div className="">
-                    <h1 className="text-3xl font-bold text-center text-blue-400">Satya Lay .</h1>
-                </div>
+                    <div className="">
+                        <Fade>
+                            <h1 className="text-3xl font-bold text-center text-blue-400">Satya Lay .</h1>
+                        </Fade>
+                    </div>
                 <div className="flex justify-center m-5">
                     <ul className="md:flex">
                         {
                             options.map((opt , i) => (
                                 <a key={i} href={opt.location} className="m-5 text-[17px] hover:text-blue-400 scale-105 transition-all">
-                                    <li>
-                                        {opt.text}
-                                    </li>
+                                    <Fade right>
+                                        <li>
+                                            {opt.text}
+                                        </li>
+                                    </Fade>
                                 </a>
                             ))
                         }
@@ -85,7 +89,9 @@ function Footer(){
                     </ul>
                 </div>
                 <div className="">
+                   <Fade>
                     <h1 className="text-md opacity-90 text-center">&copy; 2024 Satya Lay, All rights reserved.</h1>
+                   </Fade>
                     <br></br>
                     <br></br>
                 </div>

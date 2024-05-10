@@ -1,3 +1,4 @@
+import { Fade } from 'react-reveal';
 import '../assets/css/scroll.css';
 import S1 from '../assets/images/s1.jpg';
 import S2 from '../assets/images/s2.jpg';
@@ -41,8 +42,10 @@ function Football(){
         <>
            <section className="dark:bg-slate-900 bg-blue-50  dark:text-white">
                 <div>
-                    <h3 className="text-xl font-medium text-center">Sports</h3>
-                    <h1 className="text-[40px] text-center font-bold text-blue-400">Adventure</h1>
+                    <Fade>
+                        <h3 className="text-xl font-medium text-center">Sports</h3>
+                        <h1 className="text-[40px] text-center font-bold text-blue-400">Adventure</h1>
+                    </Fade>
                 </div>
                 <div className="w-full">
                     <div className='slider overflow-hidden h-96 mx-auto relative w-full grid place-items-center'>

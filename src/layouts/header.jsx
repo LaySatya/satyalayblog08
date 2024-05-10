@@ -1,6 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect, useState } from 'react';
+import { Fade } from 'react-reveal';
 import { ReactTyped } from "react-typed";
 import bg_dark from '../assets/images/dark-bg-cool.png';
 import bg_light from '../assets/images/light-bg-cool.png';
@@ -112,9 +113,11 @@ function Header() {
                             }
                         </div>
                         <a href="https://t.me/Satyalay08">
-                            <button type="button" className="animate-bounce transition-all hover:bg-gradient-to-r from-green-400 to-blue-500 p-3 px-4 mt-12 rounded-lg bg-sky-400 text-white">
-                                Contact me 💌
-                            </button>
+                            <Fade left>
+                                <button type="button" className="animate-bounce transition-all hover:bg-gradient-to-r from-green-400 to-blue-500 p-3 px-4 mt-12 rounded-lg bg-sky-400 text-white">
+                                    Contact me 💌
+                                </button>
+                            </Fade>
                         </a>
                     </div>
                 </div>
